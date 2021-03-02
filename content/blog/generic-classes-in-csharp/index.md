@@ -1,6 +1,6 @@
 ---
 title: Generic  types in C#
-date: "2020-03-02T19:20:000.284Z"
+date: "2020-03-02T19:00:00.000Z"
 description: "Generic Classes in C#"
 ---
 # Generic Types in C#
