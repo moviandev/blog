@@ -1,11 +1,10 @@
 ---
 title: Generic  types in C#
 date: "2020-03-02T19:00:00.000Z"
-description: "Generic Classes in C#"
+description: "A brief example to show how you can use generic types in C#."
 ---
-# Generic Types in C#
-In C# we can create something as a any type in typescript, but it's not the same, let's think we have created our List with our methods
-and we want to use it with different types, like bools, strings, ints and a object that we created, to do so we can create a "Generic class".
+In C# we can create something as a any type in typescript, but it's not the same, let's think we have created our List with our methods and we want to use it with different types, like bools, strings, ints and a object that we created, to do so we can create a "Generic class".
+
 Let's see an example:
 ```csharp
 using System;
@@ -107,13 +106,15 @@ Let's start with the simple when you're creating a generic method you start by d
 List<SuperHeroes> heroes; 
 ```
 When you do that all method that's of the type `T` will become of the SuperHeroes type, this way you can enforce the typing.
+
 The last method of our class is an Indexer with this "method" we can use square brackets to call a index in our list. Example:
 ``` csharp
 var firstHero = heroes[0]; 
 ```
 
 ## Null reference in generic classes
-If you try to compile this code you'll get an error, the error is because the null reference in the ``CheckListCapacity()`` method, because the compiler doesn't know if it'll be a value. Like int, double, float, etc...
+If you try to compile this code you'll get an error, the error is because the null reference in the `CheckListCapacity()` method, because the compiler doesn't know if it'll be a value. Like int, double, float, etc...
+
 How the _nextItem is always updated when we add something new there's no problem in remove it.
 
 
