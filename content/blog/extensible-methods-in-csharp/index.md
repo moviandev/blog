@@ -1,5 +1,5 @@
 ---
-title: Extension Methods in C#
+title: Extensible Methods in C#
 date: "2020-03-03T21:00:00.000Z"
 description: "When you need to create your on method to a type|class that already exists"
 ---
@@ -11,7 +11,7 @@ ages.AddRange(20, 21, 22, 23);
 ```
 Unless in the .Net env they implement that feature, just between us I think they already did hehe, but let's continue with our post.
 
-To add this method in the List class, we can do what it's called an Extension Method. I gonna write all the code and then I going to explain it 😃.
+To add this method in the List class, we can do what it's called an Extensible Method. I gonna write all the code and then I going to explain it 😃.
 
 ```csharp
 namespace Movians.Blog.Examples.Extensions
