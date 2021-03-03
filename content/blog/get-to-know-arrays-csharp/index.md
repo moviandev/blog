@@ -24,4 +24,3 @@ public ObjectToBeReturned this[int index]
 And then in your class that you gonna need it you just call `ClassName[i]`.
 
 Thanks to all for read my first post 😃.
-
