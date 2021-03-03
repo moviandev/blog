@@ -1,6 +1,6 @@
 ---
 title: Creating indexers in C#
-date: "2020-03-02T19:00:00.000Z"
+date: "2020-03-01T19:00:00.000Z"
 description: "With indexers you can access your class methods like you access a value in an Array"
 ---
 
