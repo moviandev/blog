@@ -1,6 +1,6 @@
 ---
 title: Extensible Methods in C#
-date: "2020-03-03T21:00:00.000Z"
+date: "2020-03-02T21:00:00.000Z"
 description: "When you need to create your on method to a type|class that already exists"
 ---
 
