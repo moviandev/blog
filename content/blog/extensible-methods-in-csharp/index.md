@@ -65,4 +65,3 @@ Add range is a generic method, and the compiler will not complain about the lack
 If you do that to a string you should specify the type of your extensible method.
 
 I hope that helped you 😄.
-
