@@ -1,5 +1,5 @@
 ---
-title: How to extend IComparable and IComparer in C#
+title: How to use IComparable and IComparer in C#
 date: "2020-03-03T21:00:00.000Z"
 description: "Using interfaces IComparable and IComparer"
 ---
