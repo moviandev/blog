@@ -2,6 +2,8 @@
 title: Extensible Methods in C#
 date: "2020-03-02T21:00:00.000Z"
 description: "When you need to create your on method to a type|class that already exists"
+categories: "C#, Basics"
+tags: "C#, dotnet, beginner, learning"
 ---
 
 Let's think you'll need to create a method to add lots of items in your list something like `AddRange()` but you want to use all the feats already in `System.Collections.Generic.List` a class that already exists in the .Net env. Well you think I can create a static class and extend `List` and add the method there, well the answer for that is yes and no. It'll work just fine, but you'll have to call the class everytime you need that method, you wouldn't be able to do so:
