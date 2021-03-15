@@ -1,9 +1,11 @@
-import React from "react"
-import { render } from "@testing-library/react"
+import React from 'react';
+import { render } from '@testing-library/react';
 
 import Nav from './nav';
-import { expect } from '@jest/globals';
 
+jest.mock('../../../__mocks__/gatsby')
+
+// TODO: ajustar o test
 describe('Navbar', () => {
   it('should render correctly when called', () => {
     const tree = render(<Nav />);
@@ -27,16 +29,16 @@ describe('Navbar', () => {
 
   it(`should have anchor to home page when called`, () => {
     const tree = render(<Nav />);
-    expect(tree.getByText('Home').closest('a').getAttribute('href')).toEqual('/');
+    expect(tree.getByText('Home').closest('Link').getAttribute('to')).toEqual('/');
   });
 
   it(`should have anchor to about page when called`, () => {
     const tree = render(<Nav />);
-    expect(tree.getByText(`About '[Author]'`).closest('a').getAttribute('href')).toEqual('/about');
+    expect(tree.getByText(`About '[Author]'`).closest('Link').getAttribute('to')).toEqual('/about');
   });
 
   it(`should have anchor to contacts page when called`, () => {
     const tree = render(<Nav />);
-    expect(tree.getByText(`Contact`).closest('a').getAttribute('href')).toEqual('/contact');
+    expect(tree.getByText(`Contact`).closest('a').closest('Link').getAttribute('to')).toEqual('/contact');
   });
 });

@@ -1,9 +1,11 @@
 import React from 'react';
 
+import Layout from '../components/layout/layout'
+
 const About = () => (
-  <div>
+  <Layout>
     <h1>About '[Author]'</h1>
-  </div>
+  </Layout>
 );
 
 export default About;

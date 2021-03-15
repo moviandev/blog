@@ -1,9 +1,11 @@
 import React from 'react';
 
+import Layout from '../components/layout/layout'
+
 const BlogIndex = () => (
-  <div>
+  <Layout>
     <h1>All Posts</h1>
-  </div>
+  </Layout>
 );
 
 export default BlogIndex;
