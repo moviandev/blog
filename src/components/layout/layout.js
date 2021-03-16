@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Nav from '../nav/nav';
+import './layout.css';
 
 const Layout = ({ children }) => (
   <>
     <Nav />
-    <main>{children}</main>
+    <main className="main">{children}</main>
   </>
 );
 
