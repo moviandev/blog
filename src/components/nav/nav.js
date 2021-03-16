@@ -1,17 +1,19 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
+import './nav.css';
+
 const Nav = () => (
-  <nav>
-    <ul>
-      <li>
-        <Link to="/">Home</Link>
+  <nav className="nav">
+    <ul className="nav-list">
+      <li className="nav-list-item">
+        <Link activeStyle={{ borderBottom: "2px solid #005a70" }} to="/">Home</Link>
       </li>
-      <li>
-        <Link to="/about">About '[Author]'</Link>
+      <li className="nav-list-item">
+        <Link activeStyle={{ borderBottom: "2px solid #005a70" }} to="/about">About '[Author]'</Link>
       </li>
-      <li>
-        <Link to="/contact">Contact</Link>
+      <li className="nav-list-item">
+        <Link activeStyle={{ borderBottom: "2px solid #005a70" }} to="/contact">Contact</Link>
       </li>
     </ul>
   </nav>
