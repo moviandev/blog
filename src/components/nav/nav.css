@@ -1,18 +1,20 @@
-.nav {
-  display: flex;
-  padding: 0;
-  margin: 0 20em 0 20em;
-  opacity: .9;
-  backdrop-filter: blur(5px);
-  border-radius: 2em;
-  align-items: center;
-  justify-content: center;
+.nav  {
+    display: block;
+    margin: 0em;
+    opacity: 11;
+    backdrop-filter: blur(3px);
+    box-shadow: 1px 1px 1px -1px #ccc;
+    position: fixed;
+    width: 100%;
+    height: 4em;
+    z-index: 9999999;
 }
 
 .nav-list {
-  list-style: none;
-  display: flex;
-  padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: .7em;
 }
 
 .nav-list-item {
@@ -30,10 +32,10 @@
   color: #005a70;
   margin: 0;
   text-decoration: none;
-  transition: border 0.1s linear;
+  transition: border 0.2s linear;
 }
 
 .nav-list a:hover,
 .nav-list a:focus  {
-  border-bottom: 1px solid #005a70;
+  border-bottom: 2px solid #005a70;
 }

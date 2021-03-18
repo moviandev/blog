@@ -3,8 +3,7 @@ import React from 'react';
 import Layout from '../components/layout/layout'
 
 const About = () => (
-  <Layout>
-    <h1>About '[Author]'</h1>
+  <Layout pageTitle="About Me">
   </Layout>
 );
 

@@ -1,11 +1,29 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from '../components/layout/layout'
+import Layout from '../components/layout/layout';
+import Post from '../components/post/post';
+import Bio from '../components/bio/bio';
 
-const BlogIndex = () => (
-  <Layout>
-    <h1>All Posts</h1>
+const BlogIndex = ({ data }) => (
+  <Layout pageTitle="Movian's Blog">
+    <Bio />
+    {
+      data.allMarkdownRemark.edges.map(post => {
+        const { title, date, description, path } = post.node.frontmatter;
+
+        return (
+          <Post
+            title={title}
+            description={description}
+            date={date}
+            path={path}
+            categories=""
+            tags=""
+          />
+        );
+      })
+    }
   </Layout>
 );
 
