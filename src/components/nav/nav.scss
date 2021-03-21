@@ -1,0 +1,44 @@
+@use "../../styles/utils/variables/colors/colors" as colors;
+@use "../../styles/utils/variables/sizes/sizes" as sizes;
+
+.nav  {
+  display: block;
+  margin: sizes.$spacing-0;
+  opacity: 11;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  position: fixed;
+  width: sizes.$maxWidth-full;
+  height: sizes.$spacing-16;
+  z-index: 9999999;
+  border-bottom: sizes.$spacing-px solid colors.$border-menu-color-dark;
+
+  .nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: sizes.$spacing-3;
+
+    .nav-list a {
+      color: colors.$font-menu-dark;
+      margin: sizes.$spacing-0;
+      text-decoration: none;
+      transition: border 0.2s linear;
+      
+      &:hover,
+      &:focus {
+        border-bottom: 2px solid colors.$font-menu-dark;
+      }
+    }
+
+    .nav-list-item {
+      margin-right: sizes.$spacing-4;
+      padding: sizes.$spacing-0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: sizes.$spacing-6;
+    }
+  }
+}
+

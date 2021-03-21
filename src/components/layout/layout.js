@@ -3,13 +3,17 @@ import PropTypes from 'prop-types';
 
 import Nav from '../nav/nav';
 import Header from '../header/header';
-import './layout.css';
+
+import '../../styles/styles.scss';
+import './layout.scss';
 
 const Layout = ({ children, pageTitle }) => (
   <>
     <Nav />
-    <Header pageTitle={pageTitle} />
-    <main className="main">{children}</main>
+    <div className="global-wrapper">
+      <Header pageTitle={pageTitle} />
+      <main className="main">{children}</main>
+    </div>
   </>
 );
 

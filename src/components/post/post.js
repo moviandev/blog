@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import './post.css';
+
+import '../../styles/styles.scss';
+import './post.scss';
 
 const buildCategoryTag = (categories) => {
   categories.map(element => {
@@ -13,7 +15,7 @@ const buildCategoryTag = (categories) => {
 
 const Post = ({ title, description, date, path, categories, tags }) => (
   <div className="post">
-    <h3 className="post-title"><Link to={path} className="post-title-link">{title}</Link></h3>
+    <h2 className="post-title"><Link to={path} className="post-title-link">{title}</Link></h2>
     <span className="post-date">{date}</span>
     <p className="post-description">{description}</p>
     {/* {buildCategoryTag(categories)} */}
