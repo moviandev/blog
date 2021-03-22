@@ -19,15 +19,13 @@
     justify-content: center;
     margin-top: sizes.$spacing-3;
 
-    .nav-list a {
-      color: colors.$font-menu-dark;
+    a {
       margin: sizes.$spacing-0;
-      text-decoration: none;
       transition: border 0.2s linear;
       
       &:hover,
       &:focus {
-        border-bottom: 2px solid colors.$font-menu-dark;
+        border-bottom: 2px solid colors.$border-menu-color-dark;
       }
     }
 

@@ -13,13 +13,28 @@ const buildCategoryTag = (categories) => {
   });
 }
 
+const buildPostDate = (date) => {
+  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December']
+  const newDate = new Date(date);
+  const day = newDate.getDate() + 1;
+  const month = monthNames[newDate.getMonth()];
+  const year = newDate.getUTCFullYear();
+
+  return `${year} ${month} ${day}`;
+}
+
 const Post = ({ title, description, date, path, categories, tags }) => (
-  <div className="post">
-    <h2 className="post-title"><Link to={path} className="post-title-link">{title}</Link></h2>
-    <span className="post-date">{date}</span>
-    <p className="post-description">{description}</p>
-    {/* {buildCategoryTag(categories)} */}
-  </div>
+  <article className="post">
+    <header>
+      <h2 className="post-title"><Link to={path} className="post-title-link">{title}</Link></h2>
+      <small>{buildPostDate(date)}</small>
+    </header>
+    <section>
+      <p className="post-description">{description}</p>
+      {/* {buildCategoryTag(categories)} */}
+    </section>
+  </article>
 );
 
 export default Post;

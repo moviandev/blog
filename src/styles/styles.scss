@@ -55,6 +55,10 @@ body {
     }
   }
 
+  small {
+    color: colors.$font-dark;
+  }
+
   a {
     color: colors.$font-anchor-dark;
     text-decoration: none;
