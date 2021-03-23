@@ -3,7 +3,12 @@
 @use "./utils/variables/sizes/sizes" as sizes;
 
 * {
-  box-sizing: border-box;
+  &,
+  &:before,
+  &:after {
+    box-sizing: border-box;
+    transition: all 200ms ease;
+  }
 }
 
 html,

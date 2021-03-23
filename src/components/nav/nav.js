@@ -6,17 +6,9 @@ import './nav.scss';
 
 const Nav = () => (
   <nav className="nav">
-    <ul className="nav-list">
-      <li className="nav-list-item">
-        <Link activeStyle={{ borderBottom: "2px solid #005a70" }} to="/">Home</Link>
-      </li>
-      <li className="nav-list-item">
-        <Link activeStyle={{ borderBottom: "2px solid #005a70" }} to="/about">About me</Link>
-      </li>
-      <li className="nav-list-item">
-        <Link activeStyle={{ borderBottom: "2px solid #005a70" }} to="/contact">Contact</Link>
-      </li>
-    </ul>
+    <Link activeClassName="active" to="/">Home</Link>
+    <Link activeClassName="active" to="/about">About me</Link>
+    <Link activeClassName="active" to="/contact">Contact</Link>
   </nav>
 );
 

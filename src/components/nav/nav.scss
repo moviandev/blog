@@ -1,42 +1,70 @@
 @use "../../styles/utils/variables/colors/colors" as colors;
 @use "../../styles/utils/variables/sizes/sizes" as sizes;
+@use "../../styles/utils/variables/fonts/fonts" as fonts;
+@use "../../styles/mixins/menu/generateClasses" as mixins;
 
-.nav  {
-  display: block;
-  margin: sizes.$spacing-0;
-  opacity: 11;
+nav {
+  border: 2px solid #1d1e22;
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
+  display: table;
+  table-layout: fixed;
+  margin: 0vh 29vh 0vh 29vh;
+  width: 70%;
+  text-align: center;
   position: fixed;
-  width: sizes.$maxWidth-full;
-  height: sizes.$spacing-16;
-  z-index: 9999999;
-  border-bottom: sizes.$spacing-px solid colors.$border-menu-color-dark;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0.9;
 
-  .nav-list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin-top: sizes.$spacing-3;
+  a {
+    display: table-cell;    
+    width: 1%;
+    padding: 1rem;
+    color: colors.$background-light;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
 
-    a {
-      margin: sizes.$spacing-0;
-      transition: border 0.2s linear;
-      
-      &:hover,
-      &:focus {
-        border-bottom: 2px solid colors.$border-menu-color-dark;
+    @include mixins.generateClasses();
+
+    &:hover {
+      color: colors.$background-dark;
+
+      @media screen and (max-width: sizes.$small) {
+        color: colors.$background-light;
       }
     }
+    
+    &:last-child:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      background: #fff;
+      height: 100%;
+      -webkit-backdrop-filter: blur(3px);
+      backdrop-filter: blur(5px);
+      z-index: -1;
+      opacity: .8;
 
-    .nav-list-item {
-      margin-right: sizes.$spacing-4;
-      padding: sizes.$spacing-0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: sizes.$spacing-6;
+      @media screen and (max-width: sizes.$small) {
+        background: colors.$none;
+      }
     }
+  }
+  .active{
+    top: 0;
+    background: colors.$background-light;
+    color: colors.$background-dark;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    opacity: 0.5;
+}
+  
+  @media screen and (max-width: sizes.$small) {
+    margin: 0vh;
+    width: 100%;
   }
 }
 
