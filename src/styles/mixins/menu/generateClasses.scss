@@ -1,4 +1,4 @@
-$maxNumberOfElements: 5;
+$maxNumberOfElements: 3;
 
 @mixin generateClasses {
   @for $lastElementNo from 1 through $maxNumberOfElements {
