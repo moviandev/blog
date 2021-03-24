@@ -1,0 +1,78 @@
+@use "./utils/variables/colors/colors" as colors;
+@use "./utils/variables/fonts/fonts" as fonts;
+@use "./utils/variables/sizes/sizes" as sizes;
+
+* {
+  &,
+  &:before,
+  &:after {
+    box-sizing: border-box;
+    transition: all 200ms ease;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: fonts.$fontFamily-sans;
+  font-size: fonts.$fontSize-1;
+  background: colors.$background-dark;
+  color: colors.$color-fonts;
+
+  .global-wrapper {
+    margin: sizes.$spacing-0 auto;
+    max-width: sizes.$maxWidth-wrapper;
+    padding: sizes.$spacing-10 sizes.$spacing-5;
+  }
+
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: fonts.$font-heading;
+    margin-top: sizes.$spacing-12;
+    margin-bottom: sizes.$spacing-6;
+    line-height: fonts.$lineHeight-tight;
+    letter-spacing: -.025em;
+    color: colors.$font-heading-dark;
+  }
+
+  h1 {
+    font-weight: 900;
+    font-size: 2.488rem;
+  }
+
+  h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: colors.$font-heading-dark;
+  }
+
+  p {
+    font-family: fonts.$fontFamily-sans;
+    line-height: 1.625;
+    --baseline-multiplier: 0.179;
+    --x-height-multiplier: 0.35;
+    margin: sizes.$spacing-0 sizes.$spacing-0 sizes.$spacing-8 sizes.$spacing-0;
+    color: colors.$font-dark;
+    
+    strong {
+      color: colors.$font-strong-dark
+    }
+  }
+
+  small {
+    color: colors.$font-dark;
+  }
+
+  a {
+    color: colors.$font-anchor-dark;
+    text-decoration: none;
+  }
+
+  code {
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+  }
+}

@@ -1,29 +1,31 @@
 module.exports = {
   siteMetadata: {
-    title: `Movian's blog`,
-    author: {
-      name: `Matheus Viana`,
-      summary: `a regular guy who likes to code`,
-    },
-    description: ``,
-    siteUrl: `http://matheusviana.dev`,
-    social: {
-      github: `moviandev`,
-    },
+    title: `Matheus's Blog`,
+    description: `Written by Matheus Viana a regular guy who likes to code.`,
+    author: `Matheus Viana`,
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
+        name: `Movian's Blog`,
+        short_name: `movianBlog`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`,
       },
     },
     {
@@ -48,30 +50,24 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        name: `posts`,
+        path: `${__dirname}/content/posts`,
       },
     },
-    `gatsby-plugin-feed`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        name: `assets`,
+        path: `${__dirname}/content/assets`,
       },
     },
-    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    `gatsby-plugin-sass`
   ],
 }

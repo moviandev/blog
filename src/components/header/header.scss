@@ -1,0 +1,14 @@
+@use "../../styles/utils/variables/fonts/fonts" as fonts;
+@use "../../styles/utils/variables/sizes/sizes" as sizes;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    width: sizes.$maxWidth-full;
+    height: sizes.$height-auto;
+    line-height: fonts.$lineHeight-normal;
+  }
+}
