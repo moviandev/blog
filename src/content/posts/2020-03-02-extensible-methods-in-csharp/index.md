@@ -4,7 +4,7 @@ date: "2020-03-02"
 description: "When you need to create your on method to a type|class that already exists"
 categories: "C#, Basics"
 tags: "C#, dotnet, beginner, learning"
-path: extensible-methods
+path: "/extensible-methods"
 author: "Matheus Viana"
 ---
 

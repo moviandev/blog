@@ -4,7 +4,7 @@ date: "2020-03-01"
 description: "With indexers you can access your class methods like you access a value in an Array"
 categories: "C#, Basics"
 tags: "C#, dotnet, beginner, learning"
-path: indexers-in-csharp
+path: "/indexers-in-csharp"
 ---
 
 An indexer is the same as a getter method, but instead calling methods with ` YourMthod() `, you can call it like you'd did in an array ` YourMthod[]; `.

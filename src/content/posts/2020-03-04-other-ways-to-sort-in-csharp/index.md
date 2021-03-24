@@ -5,7 +5,7 @@ description: "Sorting and filtering using the Linq collection"
 categories: "C#, Basics"
 tags: "C#, dotnet, beginner, learning"
 author: "Matheus Viana"
-path: ways-to-sort-and-filter-using-linq
+path: "/ways-to-sort-and-filter-using-linq"
 ---
 Hi everyone,
 

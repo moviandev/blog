@@ -5,7 +5,7 @@ description: "Using interfaces IComparable and IComparer"
 author: "Matheus Viana"
 categories: "C#, Basics"
 tags: "C#, dotnet, beginner, learning"
-path: how-to-implement-comparer-interfaces
+path: "/how-to-implement-comparer-interfaces"
 ---
 Hello everyone,
 

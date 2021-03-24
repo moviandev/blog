@@ -4,7 +4,7 @@ date: "2020-03-01"
 description: "A brief example to show how you can use generic types in C#."
 categories: "C#, Basics"
 tags: "C#, dotnet, beginner, learning"
-path: generic-classes
+path: "/generic-classes"
 author: "Matheus Viana"
 ---
 In C# we can create something as a any type in typescript, but it's not the same, let's think we have created our List with our methods and we want to use it with different types, like bools, strings, ints and a object that we created, to do so we can create a "Generic class".
